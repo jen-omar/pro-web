@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body onload="loadB()">
+    <button onclick="verification()">valider</button>
+    <p>exemple click</p>
+    <button id="myBtn">tester le boutton</button>
+    <p>Qu'est-ce qu'un événement?</p>
+</body>
+<p>selectionner une classe</p>
+<select id="select">
+    <option value="2A10">2A10</option>
+    <option value="2A20">2A20</option>
+    <option value="2A33">2A33</option>
+    <option value="2A45">2A45</option>
+</select>
+<p id="classe"></p>
+<script>
+    var b=document.getElementById('myBtn');
+    b.addEventListener('click',function(){window.alert('Clic sur le paragraphe')});
+    var x=document.getElementById("select");
+    x.addEventListener("change",function(){var value=document.getElementById("select").value;
+        document.getElementById("classe").innerHTML="tu as selectionné:"+value;});
+</script>
+<form id="form">
+Entrez votre nom
+<input id="nom" type="text" name="fname">
+<input type="submit" value="Valider">
+</form>
+<p id="paragraphe"></p>
+<script>
+    document.getElementById('form').addEventListener("submit",function(e){e.preventDefault();
+        var nom = document.getElementById("nom").value;
+        document.getElementById("paragraphe").innerHTML="Bienvenue: " + nom;
+    });
+</script>
+</html>

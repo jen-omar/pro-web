@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Travel Offer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 500px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], input[type="date"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        select {
+            padding: 8px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        /* Placeholder styles */
+        ::placeholder {
+            color: #aaa;
+            opacity: 1; /* For older browsers */
+        }
+
+    </style>
+</head>
+<body>
+
+    <form>
+        <h1>Add Travel Offer</h1>
+        <table>
+            <tr>
+                <td>
+                    <label>Title:</label>
+                    <input type="text" name="title" placeholder="Enter the offer title" required minlength="3">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Destination:</label>
+                    <input type="text" name="destination" placeholder="Enter the destination" required pattern="[a-zA-Z\s]+" minlength="3">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Departure Date:</label>
+                    <input type="date" name="Departure Date" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Return Date:</label>
+                    <input type="date" name="Return Date" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Price:</label>
+                    <input type="number" step="0.01" name="Price" placeholder="Enter the Price" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Availability :</label> <br>
+                    <input type="checkbox" name="Availability"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Category:</label>
+                    <select required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Beach">Beach</option>
+                        <option value="Family">Family</option>
+                        <option value="Couple">Couple</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="offer" value="Add Offer">  
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
